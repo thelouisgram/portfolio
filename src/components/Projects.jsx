@@ -2,17 +2,17 @@ import { projects } from "../utils";
 
 const Projects = () => {
   return (
-    <section className="w-full h-auto py-20">
+    <section id="projects" className="w-full h-auto pb-24 pt-[80px]">
       <h1 className="text-white text-center text-[48px] font-[700] mb-12">
         Projects
       </h1>
-      <h2 className="w-[625px] text-center mx-auto text-[18px] font-[500] mb-16 text-white">
+      <h2 className="ss:w-[625px] text-center mx-auto text-[18px] font-[500] mb-16 text-white">
         During my free time, I take pleasure in engaging in experimentation and
         constructing projects. You can explore some of these endeavors on my GitHub page,
         where you'll also discover various other miscellaneous creations I've
         been involved in.
       </h2>
-      <div className="w-full h-full grid grid-cols-3 gap-10 ">
+      <div className="w-full h-full grid grid-cols-1 ss:grid-cols-3 gap-4 ss:gap-10 ">
         {projects.map((item) => {
           return (
             <div

@@ -70,3 +70,12 @@ export const projects = [
         Repository: "https://github.com/thelouisgram/Weather-App",
     },
 ];
+
+
+export const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+};
