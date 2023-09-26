@@ -6,7 +6,8 @@ export default {
       fontFamily: {
         Sans: ["DM Sans", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
-        Inter: ["Inter", "sans-serif"]
+        Inter: ["Inter", "sans-serif"],
+        Space: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
         
