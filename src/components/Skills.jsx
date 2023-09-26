@@ -14,10 +14,10 @@ const Skills = () => {
       <h1 className="text-white text-center text-[28px] ss:text-[48px] font-[700] mb-8 ss:mb-12">
         Skills and Technologies
       </h1>
-      <h2 className="text-[20px] ss:text-[28px] font-[600] mb-3 text-blue-500 text-center md:text-left">
+      <h2 className="text-[20px] ss:text-[28px] font-[600] mb-3 text-blue-500 text-center">
         I primarily specialize in Frontend Technologies.
       </h2>
-      <h2 className="ss:w-[525px] md:text-left text-[18px] font-[500] mb-10 text-center mx-auto md:mx-0">
+      <h2 className="ss:w-[525px] text-[18px] font-[500] mb-10 text-center mx-auto ">
         I've gained experience with a range of tools and technologies.
         These have been instrumental in various projects, including personal,
         professional, and open-source endeavors.
