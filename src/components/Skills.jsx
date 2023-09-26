@@ -1,13 +1,13 @@
 const Skills = () => {
   const tech = [
-    { image: "/public/assets/skills/react.svg", name: "React" },
-    { image: "/public/assets/skills/tailwindcss.svg", name: "TailwindCss" },
-    { image: "/public/assets/skills/git.svg", name: "Github" },
-    { image: "/public/assets/skills/html.svg", name: "Html" },
-    { image: "/public/assets/skills/typescript.svg", name: "TypeScript" },
-    { image: "/public/assets/skills/javascript.svg", name: "JavaScript" },
-    { image: "/public/assets/skills/css.svg", name: "Css" },
-    { image: "/public/assets/skills/nodejs.svg", name: "Nodejs" },
+    { image: "/assets/skills/react.svg", name: "React" },
+    { image: "/assets/skills/tailwindcss.svg", name: "TailwindCss" },
+    { image: "/assets/skills/git.svg", name: "Github" },
+    { image: "/assets/skills/html.svg", name: "Html" },
+    { image: "/assets/skills/typescript.svg", name: "TypeScript" },
+    { image: "/assets/skills/javascript.svg", name: "JavaScript" },
+    { image: "/assets/skills/css.svg", name: "Css" },
+    { image: "/assets/skills/nodejs.svg", name: "Nodejs" },
   ];
   return (
     <section id="skills" className="w-full h-auto bg-[#1A1B21] pb-24 pt-[80px] text-white">

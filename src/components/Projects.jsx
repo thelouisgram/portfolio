@@ -28,14 +28,14 @@ const Projects = () => {
                 <div className="flex items-center gap-5">
                   <a href={item.Link} className="flex gap-2 items-center">
                     <img
-                      src="/public/assets/projects/eye.png"
+                      src="/assets/projects/eye.png"
                       className="h-[20px]"
                     />
                     Site
                   </a>
                   <a href={item.Repository} className="flex gap-2 items-center">
                     <img
-                      src="/public/assets/projects/github.png"
+                      src="/assets/projects/github.png"
                       className="h-[20px]"
                     />
                     Repo

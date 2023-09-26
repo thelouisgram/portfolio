@@ -29,7 +29,7 @@ const Home = () => {
       <div>
         <div className="w-auto h-[250px] md:w-[1/2] p-4 md:h-[435px] flex justify-end items-center">
           <img
-            src="/public/assets/hero-image.svg"
+            src="/assets/hero-image.svg"
             alt="software engineer"
             className="w-full h-full"
           />
