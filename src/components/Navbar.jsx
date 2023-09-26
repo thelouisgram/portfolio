@@ -34,13 +34,13 @@ const Navbar = ({ setNav, nav }) => {
                 </h2>
             </div>
             <div
-                className="flex md:hidden h-[40px] w-auto items-center"
+                className="flex md:hidden h-[40px] w-auto items-center transform "
                 onClick={() => setNav((prev) => !prev)}
             >
                 {nav ? (
-                    <img src="/assets/cancel.svg" alt="cancel" className="w-full h-full" />
+                    <img src="/assets/cancel.svg" alt="cancel" className="w-full h-full transition" />
                 ) : (
-                    <img src="/assets/menu.svg" alt="menu" className="w-full h-full" />
+                        <img src="/assets/menu.svg" alt="menu" className="w-full h-full transition" />
                 )}
             </div>
         </section>

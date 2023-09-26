@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="bg-[#23252C] w-full h-auto font-Space relative">
       <div className="w-full md:w-[1100px] md:mx-auto h-full ">
-        <Navbar setNav={setNav} />
+        <Navbar setNav={setNav} nav ={nav}/>
         <AnimatePresence>
           {nav && (
             <motion.div
@@ -22,7 +22,7 @@ const App = () => {
               exit={{ opacity: 0 }}
               transition={{ ease: "easeInOut", duration: 0.8 }}
             >
-              <MobileNavbar setNav={setNav} nav={nav} />
+              <MobileNavbar setNav={setNav}/>
             </motion.div>
           )}
         </AnimatePresence>
