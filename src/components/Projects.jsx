@@ -2,7 +2,7 @@ import { projects } from "../utils";
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full h-auto pb-16 md:pb-24 pt-[80px]">
+    <section id="projects" className="w-full h-auto pb-20 md:pb-24 pt-[80px]">
       <h1 className="text-white text-center text-[48px] font-[700] mb-12">
         Projects
       </h1>
