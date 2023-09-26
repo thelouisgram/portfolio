@@ -65,8 +65,10 @@ const Home = () => {
       <motion.div
         variants={imageVariants}
         transition={transition}
-        className="w-auto h-[250px] md:w-[1/2] p-4 md:h-[435px] flex justify-end items-center"
+        className="w-auto h-[250px] md:w-[1/2] p-4 md:h-[435px] flex justify-end items-center relative"
       >
+        <img src='/assets/rocket.png' alt='rocket' className='absolute right-0 top-0 infinite-up-and-down'/>
+        <img src='/assets/code.png' alt='code' className='absolute left-10  infinite-up-and-down'/>
         <img
           src="/assets/hero-image.svg"
           alt="software engineer"

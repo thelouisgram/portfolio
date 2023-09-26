@@ -2,7 +2,7 @@ const Skills = () => {
   const tech = [
     { image: "/assets/skills/react.svg", name: "React" },
     { image: "/assets/skills/tailwindcss.svg", name: "TailwindCss" },
-    { image: "/assets/skills/git.svg", name: "Github" },
+    { image: "/assets/skills/git.svg", name: "Git" },
     { image: "/assets/skills/html.svg", name: "Html" },
     { image: "/assets/skills/typescript.svg", name: "TypeScript" },
     { image: "/assets/skills/javascript.svg", name: "JavaScript" },

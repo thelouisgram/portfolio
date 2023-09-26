@@ -11,6 +11,16 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.hero-span{
-  
+@keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Apply the animation to an element */
+.infinite-up-and-down {
+  animation: upAndDown 1s ease-in-out infinite;
 }
