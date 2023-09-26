@@ -14,9 +14,9 @@ const App = () => {
 
   useEffect(() => {
     const options = {
-      root: null, // Use the viewport as the root
+      root: null, 
       rootMargin: "0px",
-      threshold: 0.3, // Trigger when 50% of the component is in the viewport
+      threshold: 0.3, 
     };
 
     const observer = new IntersectionObserver((entries) => {

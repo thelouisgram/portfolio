@@ -11,7 +11,7 @@ const Skills = () => {
   ];
   return (
     <section id="skills" className="w-full h-auto bg-[#23252C] pb-20 md:pb-24 pt-[80px] text-white">
-      <h1 className="text-white text-center text-[28px] ss:text-[48px] font-[700] mb-8 ss:mb-12">
+      <h1 className="text-white text-center text-[36px] ss:text-[48px] font-[700] mb-8 ss:mb-12">
         Skills and Technologies
       </h1>
       <h2 className="text-[20px] ss:text-[28px] font-[600] mb-3 text-blue-500 text-center">
