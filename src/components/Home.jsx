@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0, x: 20 },
     visible: { opacity: 1, x: 0 },
   };
 
