@@ -9,10 +9,10 @@ import MobileNavbar from "./components/MobileNavbar"
 const App = () => {
   const [nav, setNav] = useState(false)
   return (
-    <div className="bg-[#1A1B21] w-full h-auto font-Space relative">
+    <div className="bg-[#23252C] w-full h-auto font-Space relative">
       <div className="w-full md:w-[1100px] md:mx-auto h-full ">
-      <Navbar setNav={setNav}/>
-      {nav &&<MobileNavbar setNav={setNav}/>}
+        <Navbar setNav={setNav} />
+        {nav && <MobileNavbar setNav={setNav} />}
       </div>
       <div className="w-full px-3 xs:px-5 md:px-0 md:w-[1100px] md:mx-auto h-auto ">
         <Home />
@@ -20,7 +20,7 @@ const App = () => {
         <Projects />
         <Contact />
       </div>
-          </div>
+    </div>
   )
 }
 

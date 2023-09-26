@@ -10,7 +10,7 @@ const Skills = () => {
     { image: "/assets/skills/nodejs.svg", name: "Nodejs" },
   ];
   return (
-    <section id="skills" className="w-full h-auto bg-[#1A1B21] pb-24 pt-[80px] text-white">
+    <section id="skills" className="w-full h-auto bg-[#23252C] pb-16 md:pb-24 pt-[80px] text-white">
       <h1 className="text-white text-center text-[28px] ss:text-[48px] font-[700] mb-8 ss:mb-12">
         Skills and Technologies
       </h1>
