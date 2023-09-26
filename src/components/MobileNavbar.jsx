@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { scrollToSection } from "../utils";
 
 const sections = [
@@ -11,7 +11,7 @@ const sections = [
 const MobileNavbar = ({ setNav }) => {
     const handleClick = (sectionId) => {
         scrollToSection(sectionId);
-        setNav(false); // Close the mobile navigation when a section is clicked
+        setNav(false);
     };
 
     return (

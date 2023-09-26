@@ -12,7 +12,7 @@ const Projects = () => {
         where you'll also discover various other miscellaneous creations I've
         been involved in.
       </h2>
-      <div className="w-full h-full grid grid-cols-1 ss:grid-cols-3 gap-4 ss:gap-10 ">
+      <div className="w-full h-full grid grid-cols-1 ss:grid-cols-3 gap-6 ss:gap-10 ">
         {projects.map((item) => {
           return (
             <div
