@@ -16,13 +16,12 @@ const App = () => {
     const options = {
       root: null, // Use the viewport as the root
       rootMargin: "0px",
-      threshold: 0.5, // Trigger when 50% of the component is in the viewport
+      threshold: 0.3, // Trigger when 50% of the component is in the viewport
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Check which component is in the viewport and update the active section state accordingly
           switch (entry.target.id) {
             case "home":
               setActiveSection("home");
