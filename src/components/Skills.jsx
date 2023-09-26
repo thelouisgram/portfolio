@@ -22,7 +22,7 @@ const Skills = () => {
         These have been instrumental in various projects, including personal,
         professional, and open-source endeavors.
       </h2>
-      <div className="w-full h-full grid grid-cols-1 ss:grid-cols-4 gap-4 ss:gap-6 md:gap-10 ">
+      <div className="w-full h-full grid grid-cols-2 ss:grid-cols-4 gap-4 ss:gap-6 md:gap-10 ">
         {tech.map((item) => {
           return (
             <div

@@ -19,22 +19,22 @@ const Contact = () => {
         contract frontend web development jobs.
       </h2>
 
-      <div className="w-auto flex flex-col xs:flex-row gap-6 justify-center ">
+      <div className="w-full item-center flex gap-3 xs:gap-4 ss:gap-6 justify-center ">
         <div
           onClick={sendEmail}
-          className="rounded-[3px] hover:bg-blue-500 hover:text-white cursor-pointer  bg-white text-gray-800 text-[18px] font-[600] px-4 py-2"
+          className="rounded-[3px] w-[90px] hover:bg-blue-500 flex justify-center hover:text-white cursor-pointer  bg-white text-gray-800 text-[18px] font-[600] py-2"
         >
           Email
         </div>
         <a
           href="https://twitter.com/thelouisgram/"
-          className="rounded-[3px] bg-white text-gray-800  hover:bg-blue-500  cursor-pointer hover:text-white text-[18px] font-[600] px-4 py-2"
+          className="rounded-[3px] bg-white w-[90px] text-gray-800 flex justify-center  hover:bg-blue-500  cursor-pointer hover:text-white text-[18px] font-[600] py-2"
         >
           Twitter
         </a>
         <a
           href="https://github.com/thelouisgram"
-          className="rounded-[3px] hover:bg-blue-500 cursor-pointer  hover:text-white bg-white text-gray-800 text-[18px] font-[600] px-4 py-2"
+          className="rounded-[3px] hover:bg-blue-500 cursor-pointer w-[90px] flex justify-center hover:text-white bg-white text-gray-800 text-[18px] font-[600] py-2"
         >
           GitHub
         </a>
