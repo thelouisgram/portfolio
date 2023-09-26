@@ -1,5 +1,6 @@
 import Home from "./components/Home"
 import Navbar from "./components/Navbar"
+import Projects from "./components/Projects"
 import Skills from "./components/Skills"
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
         <Navbar />
         <Home />
         <Skills />
+        <Projects />
       </div>
           </div>
   )
