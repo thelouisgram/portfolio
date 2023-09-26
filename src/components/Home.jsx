@@ -10,7 +10,7 @@ const Home = () => {
       className="h-auto md:h-[625px] flex flex-col md:flex-row md:justify-between md:items-center justify-center items-center pt-40 pb-20"
     >
       <div className="flex flex-col justify-center items-center md:items-start text-white md:w-[1/2] text-center md:text-left">
-        <h1 className="text-[36px] ss:text-[48px] text-blue-500 font-[600] ss:leading-[36px]">
+        <h1 className="text-[36px] ss:text-[48px] text-blue-500 font-[600] ss:leading-[px]">
           Hello, I'm
         </h1>
         <h2 className="text-[36px] md:text-[48px] text-white font-[600]">
