@@ -16,13 +16,13 @@ const MobileNavbar = ({ setNav }) => {
 
     return (
         <div className="px-3 xs:px-5 w-full h-auto shadow-sm text-white top-[80px] fixed z-[9] ">
-            <div className="w-full bg-[#161619] p-4">
+            <div className="w-full bg-[#161619] p-4 border-[1px] border-blue-500">
                 <div className="gap-6 items-center flex flex-col">
                     {sections.map((section) => (
                         <h2
                             key={section.id}
                             onClick={() => handleClick(section.id)}
-                            className="cursor-pointer hover:text-blue-500"
+                            className="cursor-pointer hover:text-blue-500 w-full border-gray-300 flex justify-center"
                         >
                             {section.label}
                         </h2>

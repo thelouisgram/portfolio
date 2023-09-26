@@ -3,7 +3,7 @@ import { scrollToSection } from "../utils";
 
 const Navbar = ({ setNav }) => {
     return (
-        <section className="h-[80px] fixed top-0 px-4 md:px-0 w-full md:w-[1100px] mdmx-auto z-10 bg-[#23252C] flex items-center justify-between text-white font-[700]">
+        <section className="h-[80px] fixed top-0 px-4 md:px-0 w-full md:w-[1100px] shadow-2xl md:shadow-none md:mx-auto z-10 bg-[#23252C] flex items-center justify-between text-white font-[700]">
             <div className="w-auto h-auto flex items-center bg-[#23252C]">
                 <h1 className="font-[600] text-[24px] font-Poppins">thelouisgram</h1>
             </div>
