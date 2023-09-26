@@ -9,8 +9,11 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full h-auto bg-[#23252C] pb-24 md:pb-32 pt-[80px] text-white"
+      className="w-full h-auto bg-[#23252C] pb-16 md:pb-24 pt-[128px] text-white relative"
     >
+      <div className="w-full flex justify-center ">
+        <img src="/assets/twitter.svg" alt="twitter" className="tilt"/>
+      </div>
       <h1 className="text-white text-center text-[28px] ss:text-[48px] font-[700] mb-8 ms:mb-12">
         Want to work with me?
       </h1>

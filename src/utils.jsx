@@ -29,7 +29,7 @@ export const projects = [
     },
     {
         image: "/assets/projects/rest-countries.png",
-        name: "Countries app",
+        name: "Countries App",
         description: "Rest Countries API App, a frontend mentor challenge",
         Link: "https://rest-country-api-thelouisgram.vercel.app/",
         Repository: "https://github.com/thelouisgram/rest-country-api",
@@ -54,13 +54,6 @@ export const projects = [
         description: "CRUD Todo App, A frontend mentor challenge",
         Link: "https://to-do-app-tawny-sigma.vercel.app/",
         Repository: "https://github.com/thelouisgram/to-do-app",
-    },
-    {
-        image: "/assets/projects/rps.png",
-        name: "Rock Paper Scissors",
-        description: "Rock paper scissors game, a theodinproject task",
-        Link: "https://thelouisgram.github.io/Rock-Paper-Scissor/",
-        Repository: "https://github.com/thelouisgram/Rock-Paper-Scissor",
     },
     {
         image: "/assets/projects/weather-app.png",

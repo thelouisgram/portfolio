@@ -23,3 +23,30 @@
 .infinite-up-and-down {
   animation: upAndDown 1s ease-in-out infinite;
 }
+
+/* Define the animation keyframes for tilting */
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-2.5deg);
+    }
+    50% {
+        transform: rotate(2.5deg);
+    }
+    75% {
+        transform: rotate(-2.5deg);
+    }
+    100% {
+        transform: rotate(2.5deg);
+    }
+}
+
+/* Apply the animation to the element */
+.tilt {
+    animation-name: tilt; /* Refers to the @keyframes definition */
+    animation-duration: 0.5s; /* Animation duration (0.5 seconds in this example) */
+    animation-timing-function: linear; /* Linear timing function for constant speed */
+    animation-iteration-count: infinite; /* Infinite loop */
+}

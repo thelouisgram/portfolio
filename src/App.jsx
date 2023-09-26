@@ -14,9 +14,9 @@ const App = () => {
 
   useEffect(() => {
     const options = {
-      root: null, 
+      root: null,
       rootMargin: "0px",
-      threshold: 0.1, 
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -57,14 +57,14 @@ const App = () => {
   return (
     <div className="bg-[#23252C] w-full h-auto font-Space relative">
       <div className="w-full md:w-[1100px] md:mx-auto h-full ">
-        <Navbar setNav={setNav} nav={nav} activeSection={activeSection}/>
+        <Navbar setNav={setNav} nav={nav} activeSection={activeSection} />
         <AnimatePresence>
           {nav && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ ease: "easeInOut", duration: 0.8 }}
+              transition={{ ease: "easeInOut", duration: 0.5 }}
             >
               <MobileNavbar setNav={setNav} activeSection={activeSection} />
             </motion.div>
