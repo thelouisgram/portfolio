@@ -12,6 +12,9 @@ const Navbar = () => {
                 <h2 className='cursor-pointer hover:text-blue-500 'onClick={() => scrollToSection('projects')}>Projects</h2>
                 <h2 className='cursor-pointer hover:text-blue-500 'onClick={() => scrollToSection('contact')}>Contact</h2>
             </div>
+            <div className="flex md:hidden">
+                <img src="/assets/menu.svg" alt="menu" />
+            </div>
         </section>
     )
 }
