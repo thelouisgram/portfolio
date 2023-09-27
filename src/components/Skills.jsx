@@ -35,7 +35,6 @@ const Skills = () => {
               >
                 <img src={item.image} alt={item.name} />
                 <h3 className="font-[500] text-white">{item.name}</h3>
-                <div className="absolute top-0 left-0 bg-blue-500 transform hover:rotate-20 h-full w-full z-[-2]" />
               </div>
             );
           })}
