@@ -112,7 +112,7 @@ const App = () => {
         {isScrolled && (
           <button
             onClick={scrollToTop}
-            className="w-[50px] h-[50px] rounded-full fixed infinite-up-and-down flex justify-center items-center p-3 cursor-pointer bg-gray-700 shadow-xl right-10 z-10 bottom-10"
+            className="w-[50px] h-[50px] rounded-full fixed infinite-up-and-down flex justify-center items-center p-3 cursor-pointer bg-gray-700 shadow-xl right-2 z-10 bottom-10"
           >
             <img src="/assets/up.png" alt="up" />
           </button>
