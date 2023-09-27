@@ -73,7 +73,7 @@ const Home = () => {
         <img
           src="/assets/rocket.png"
           alt="rocket"
-          className="absolute right-0 top-0 tilt w-[50px] h-auto md:w-auto"
+          className="absolute right-0 top-0 tilt w-[40px] h-auto md:w-auto"
         />
         <img
           src="/assets/code.png"
