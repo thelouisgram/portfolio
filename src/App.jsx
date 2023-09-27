@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import MobileNavbar from "./components/MobileNavbar";
 import RevealDiv from "./components/animation/RevealDiv";
 import { AnimatePresence, motion } from "framer-motion";
+import RevealDivX from "./components/animation/RevealDivX";
 
 const App = () => {
   const [nav, setNav] = useState(false);
@@ -79,9 +80,9 @@ const App = () => {
         <RevealDiv id="projects">
           <Projects />
         </RevealDiv>
-        <RevealDiv id="contact">
+        <RevealDivX id="contact">
           <Contact />
-        </RevealDiv>
+        </RevealDivX>
       </div>
     </div>
   );
