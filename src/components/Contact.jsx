@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full h-auto bg-[#23252C] pb-16 md:pb-24 pt-[128px] text-white relative"
+      className="w-full h-auto bg-[#23252C] pb-24 pt-[128px] text-white relative"
     >
       <div className="w-full flex justify-center ">
         <img src="/assets/twitter.svg" alt="twitter" className="tilt"/>
