@@ -12,6 +12,11 @@ import RevealDivX from "./components/animation/RevealDivX";
 const App = () => {
   const [nav, setNav] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   useEffect(() => {
     const options = {
@@ -55,16 +60,37 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const checkScrollPosition = () => {
+      if (window.scrollY !== 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", checkScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", checkScrollPosition);
+    };
+  }, []);
+
   return (
     <div className="bg-[#23252C] w-full h-auto font-Space relative">
-      <div className="w-full md:w-[1100px] md:mx-auto h-full ">
-        <Navbar setNav={setNav} nav={nav} activeSection={activeSection} />
+      <div>
+        <Navbar
+          setNav={setNav}
+          nav={nav}
+          activeSection={activeSection}
+          isScrolled={isScrolled}
+        />
         <AnimatePresence>
           {nav && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
               transition={{ ease: "easeInOut", duration: 0.5 }}
             >
               <MobileNavbar setNav={setNav} activeSection={activeSection} />
@@ -72,7 +98,7 @@ const App = () => {
           )}
         </AnimatePresence>
       </div>
-      <div className="w-full px-3 xs:px-5 md:px-0 md:w-[1100px] md:mx-auto h-auto ">
+      <div className="w-full px-3 xs:px-5 md:px-0 md:w-[1100px] md:mx-auto h-auto relative">
         <Home id="home" />
         <RevealDiv id="skills">
           <Skills />
@@ -83,6 +109,14 @@ const App = () => {
         <RevealDivX id="contact">
           <Contact />
         </RevealDivX>
+        {isScrolled && (
+          <button
+            onClick={scrollToTop}
+            className="w-[50px] h-[50px] rounded-full fixed infinite-up-and-down flex justify-center items-center p-3 cursor-pointer bg-gray-700 shadow-xl right-10 z-10 bottom-10"
+          >
+            <img src="/assets/up.png" alt="up" />
+          </button>
+        )}
       </div>
     </div>
   );

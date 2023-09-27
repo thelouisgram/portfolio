@@ -15,9 +15,9 @@ const MobileNavbar = ({ setNav, activeSection }) => {
   };
 
   return (
-    <div className="px-3 xs:px-5 w-full h-auto shadow-sm text-white top-[80px] fixed z-[9] md:hidden">
-      <div className="w-full bg-[#161619] p-4 shadow-2xl rounded-b-[5px]">
-        <div className="gap-6 items-center flex flex-col">
+    <div className="w-full bg-[#161619] shadow-sm text-white top-[80px] h-[232px] fixed z-[9] md:hidden">
+      <div className="w-full p-8 shadow-2xl rounded-b-[5px] z-[9] bg-[#161619]">
+        <div className="gap-6 items-center flex flex-col bg-[#161619]">
           {sections.map((section) => (
             <h2
               key={section.id}

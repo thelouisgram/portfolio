@@ -31,7 +31,7 @@ const Home = () => {
       variants={contentVariants}
       transition={transition}
       className="h-auto md:h-[625px] flex flex-col md:flex-row md:justify-between md:items-center justify-center 
-      items-center pt-48 md:pt-40 pb-10 gap-6 md-gap-0"
+      items-center pt-40 ss:pt-40 gap-6 md-gap-0"
     >
       <div className="flex flex-col justify-center items-center md:items-start text-white md:w-[1/2] text-center md:text-left">
         <motion.h1

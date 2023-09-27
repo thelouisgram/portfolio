@@ -5,11 +5,11 @@ import { useInView } from "react-intersection-observer";
 const RevealDivX = ({ children }) => {
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.05,
+        threshold: 0.1,
     });
 
     const variants = {
-        hidden: { opacity: 0, x: -10 }, // Starts from -50px to move left
+        hidden: { opacity: 0, x: -50 }, // Starts from -50px to move left
         visible: { opacity: 1, x: 0 }, // Ends at 0px, i.e., no horizontal movement
     };
 
