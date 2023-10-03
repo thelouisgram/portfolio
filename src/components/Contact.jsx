@@ -16,7 +16,7 @@ const Contact = () => {
       </h1>
       <div className="w-full flex flex-col md:flex-row-reverse items-center justify-center">
         <div className="w-full md:w-[1/2] flex items-center justify-center px-8 mb-12 md:mb-0 robot">
-          <img src="/public/assets/robot.png" alt="" />
+          <img src="/assets/robot.png" alt="" />
         </div>
         <div className="w-full md:w-[1/2] items-center justify-center">
           <h2 className="text-[20px] ss:text-[24px] md:text-[28px] font-[600] text-center mb-12 text-blue-500">
