@@ -27,21 +27,21 @@ const Contact = () => {
           <div className="w-full items-center flex flex-col ss:flex-row gap-6 justify-center ">
             <div
               onClick={sendEmail}
-              className="rounded-[3px] w-[160px] flex gap-3 items-center justify-center  cursor-pointer  bg-white text-gray-800 text-[18px] font-[600] py-2"
+              className="rounded-[3px] w-[160px] flex gap-3 items-center justify-center hover:bg-[#97C1CA]  cursor-pointer  bg-white text-gray-800 text-[18px] font-[600] py-2"
             >
               <img src="/assets/social/gmail.svg" alt="gmail" />
               Email
             </div>
             <a
               href="https://twitter.com/thelouisgram/"
-              className="rounded-[3px] bg-white w-[160px] gap-3 text-gray-800 flex justify-center    cursor-pointer  text-[18px] font-[600] py-2"
+              className="rounded-[3px] bg-white w-[160px] gap-3 text-gray-800 flex justify-center  hover:bg-[#97C1CA] cursor-pointer  text-[18px] font-[600] py-2"
             >
               <img src="/assets/social/twitter.svg" alt="twitter" />
               Twitter
             </a>
             <a
               href="https://github.com/thelouisgram"
-              className="rounded-[3px]  w-[160px] gap-3 cursor-pointer flex justify-center hover:transform  bg-white text-gray-800 text-[18px] font-[600] py-2"
+              className="rounded-[3px]  w-[160px] gap-3 cursor-pointer flex justify-center hover:transform  hover:bg-[#97C1CA] bg-white text-gray-800 text-[18px] font-[600] py-2"
             >
               <img src="/assets/social/github.svg" alt="github" />
               GitHub

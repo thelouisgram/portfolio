@@ -37,24 +37,26 @@ const Projects = () => {
         <div className="w-full flex gap-4 items-center justify-center">
           {startIndex > 0 && (
             <button
-              className="font-[500] py-2 w-auto px-6 text-[16px] rounded-[4px] bg-blue-500 text-white hover:bg-white hover:text-[#23252C]"
+              className="font-[700] py-2 w-auto px-6 flex gap-1 items-center text-[16px] rounded-[4px] bg-blue-500 text-white hover:bg-white hover:text-[#23252C]"
               onClick={() => {
                 prevBtn();
                 scrollToSection("rendered-projects");
               }}
             >
+              <i className="fa-solid fa-angle-left"></i>
               Prev
             </button>
           )}
           {startIndex < 4 && (
             <button
-              className="font-[500] py-2 w-auto px-6 text-[16px] rounded-[4px] bg-blue-500 text-white hover:bg-white hover:text-[#23252C]"
+              className="font-[700] py-2 w-auto flex gap-1 items-center px-6 text-[16px] rounded-[4px] bg-blue-500 text-white hover:bg-white hover:text-[#23252C]"
               onClick={() => {
                 nextBtn();
                 scrollToSection("rendered-projects");
               }}
             >
               Next
+              <i className="fa-solid fa-chevron-right"></i>
             </button>
           )}
         </div>
