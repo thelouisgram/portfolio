@@ -77,7 +77,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-[#23252C] w-full h-auto font-Space relative">
+    <div className ="bg-[#23252C] w-full h-auto font-Space relative ">
       <div>
         <Navbar
           setNav={setNav}
@@ -88,10 +88,11 @@ const App = () => {
         <AnimatePresence>
           {nav && (
             <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
+              initial={{ y: "-100%", opacity: 1 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-100%", opacity: 1}}
               transition={{ ease: "easeInOut", duration: 0.5 }}
+              className="w-full z-[10] bg-[#161619] shadow-sm text-white top-[80px] h-auto fixed md:hidden"
             >
               <MobileNavbar setNav={setNav} activeSection={activeSection} />
             </motion.div>

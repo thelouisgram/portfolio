@@ -15,14 +15,13 @@ const MobileNavbar = ({ setNav, activeSection }) => {
   };
 
   return (
-    <div className="w-full bg-[#161619] shadow-sm text-white top-[80px] h-[232px] fixed z-[9] md:hidden">
-      <div className="w-full p-8 shadow-2xl rounded-b-[5px] z-[9] bg-[#161619]">
-        <div className="gap-6 items-center flex flex-col bg-[#161619]">
+      <div className="w-full shadow-2xl rounded-b-[5px] z-[1000] bg-[#161619]">
+        <div className="items-center flex flex-col bg-[#161619]">
           {sections.map((section) => (
             <h2
               key={section.id}
               onClick={() => handleClick(section.id)}
-              className={`cursor-pointer w-full border-gray-300 flex justify-center ${
+              className={`cursor-pointer w-full border-gray-300 flex justify-center hover:bg-[#191b22] py-3 ${
                 activeSection === section.id
                   ? "hover:text-blue-500 text-blue-500"
                   : "hover:text-white"
@@ -33,7 +32,6 @@ const MobileNavbar = ({ setNav, activeSection }) => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

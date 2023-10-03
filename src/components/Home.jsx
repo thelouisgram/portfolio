@@ -42,19 +42,19 @@ const Home = () => {
         </motion.h1>
         <motion.h2
           variants={contentVariants}
-          className="text-[28px] ss:text-[48px] text-white font-[600]"
+          className="text-[24px] xs:text-[28px] text-white font-[600]"
         >
           Adeyeye Adesanoye
         </motion.h2>
         <motion.h1
           variants={contentVariants}
-          className="text-[28px] ss:text-[48px] text-blue-500 font-[600] ss:leading-[48px]"
+          className="text-[24px] xs:text-[28px] ss:text-[48px] text-blue-500 font-[600] ss:leading-[48px]"
         >
           FRONTEND ENGINEER
         </motion.h1>
         <motion.p
           variants={contentVariants}
-          className="w-full ss:w-[575px] md:w-[475px] text-[16px] mt-[32px]"
+          className="w-full ss:w-[575px] md:w-[475px] text-[13px] xs:text-[16px] mt-[32px]"
         >
           I'm a <Span>frontend developer</Span> with a proven track record of
           crafting visually captivating and{" "}

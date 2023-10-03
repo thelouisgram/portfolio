@@ -3,7 +3,7 @@ import { scrollToSection } from "../utils";
 
 const Navbar = ({ setNav, nav, activeSection, isScrolled }) => {
   return (
-    <section className={`h-[80px] w-full fixed top-0 z-10 bg-[#23252C] `}>
+    <section className={`h-[80px] w-full fixed top-0 z-[101] bg-[#23252C] `}>
       <div className={`${isScrolled ? "shadow-xl" : ""} w-full h-full `}>
         <div
           className={`px-4 md:px-0 md:w-[1100px] h-full flex items-center justify-between text-white font-[700] md:mx-auto `}

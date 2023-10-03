@@ -9,6 +9,7 @@
 
 :root {
   -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
 }
 
 @keyframes upAndDown {
@@ -51,3 +52,17 @@
   animation-timing-function: linear; /* Linear timing function for constant speed */
   animation-iteration-count: infinite; /* Infinite loop */
 }
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(40px); /* Adjust the distance as needed */
+    }
+}
+
+.robot {
+    animation: moveUpDown 10s linear infinite; /* Adjust the duration as needed */
+}
+
