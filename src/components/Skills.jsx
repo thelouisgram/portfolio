@@ -20,7 +20,7 @@ const Skills = () => {
       <h2 className="text-[20px] ss:text-[28px] font-[600] mb-3 text-blue-500 text-center">
         I primarily specialize in Frontend Technologies.
       </h2>
-      <h2 className="ss:w-[525px] text-[18px] font-[500] mb-10 text-center mx-auto ">
+      <h2 className="ss:w-[525px] text-[13px] xs:text-[16px] font-[500] mb-10 text-center mx-auto ">
         I've gained experience with a range of tools and technologies.
         These have been instrumental in various projects, including personal,
         professional, and open-source endeavors.

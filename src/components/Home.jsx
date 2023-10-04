@@ -36,7 +36,7 @@ const Home = () => {
       <div className="flex flex-col justify-center items-center md:items-start text-white md:w-[1/2] text-center md:text-left">
         <motion.h1
           variants={contentVariants}
-          className="text-[28px] ss:text-[48px] text-blue-500 font-[600] ss:leading-[48px]"
+          className="text-[24px] xs:text-[28px] ss:text-[48px] text-blue-500 font-[600] ss:leading-[48px]"
         >
           Hello, I'm
         </motion.h1>

@@ -16,7 +16,7 @@ const ProjectItems = ({ startIndex, itemsPerPage }) => {
             </div>
             <div className="px-3 flex flex-col gap-3">
               <h3 className="font-[600] text-[18px] text-white">{item.name}</h3>
-              <p className="text-gray-400 text-[16px]">{item.description}</p>
+              <p className="text-gray-400 text-[13px] xs:text-[16px]">{item.description}</p>
               <div className="flex items-center gap-5">
                 <a href={item.Link} className="flex gap-2 items-center">
                   <img src="/assets/projects/eye.png" className="h-[20px]" />

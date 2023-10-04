@@ -58,7 +58,7 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(40px); /* Adjust the distance as needed */
+        transform: translateY(30px); /* Adjust the distance as needed */
     }
 }
 

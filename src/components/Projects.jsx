@@ -24,7 +24,7 @@ const Projects = () => {
       <h1 className="text-white text-center text-[36px] md:text-[48px] font-[700] mb-12">
         Projects
       </h1>
-      <h2 className="ss:w-[625px] text-center mx-auto text-[18px] font-[500] text-white">
+      <h2 className="ss:w-[625px] text-center mx-auto text-[13px] xs:text-[16px] font-[500] text-white">
         During my free time, I take pleasure in engaging in experimentation and
         constructing projects. You can explore some of these endeavors on my
         GitHub page, where you'll also discover various other miscellaneous
