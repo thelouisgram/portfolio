@@ -37,7 +37,7 @@ export const projects = [
     {
         image: "/assets/projects/image-box.png",
         name: "Image Box",
-        description: "Image Gallery App, Stage 3 Hng internship task.",
+        description: "Image Gallery App, with a drag and drop feature.",
         Link: "https://best-image-box.vercel.app/",
         Repository: "https://github.com/thelouisgram/image-box",
     },
