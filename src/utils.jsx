@@ -17,7 +17,7 @@ export const projects = [
         image: "/assets/projects/dictionary.png",
         name: "Dictionary",
         description: "Dictionary web app, a frontend mentor challenge",
-        Link: "https://dictionary-web-app-weld.vercel.app/",
+        Link: "https://dictionary-web-app-sandy.vercel.app/",
         Repository: "https://github.com/thelouisgram/dictionary-web-app",
     },
     {
