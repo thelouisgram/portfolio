@@ -72,3 +72,7 @@ export const scrollToSection = (sectionId) => {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 };
+
+
+
+

@@ -8,6 +8,7 @@ import MobileNavbar from "./components/MobileNavbar";
 import RevealDiv from "./components/animation/RevealDiv";
 import { AnimatePresence, motion } from "framer-motion";
 import RevealDivX from "./components/animation/RevealDivX";
+import { useCallback } from "react";
 
 const App = () => {
   const [nav, setNav] = useState(false);
@@ -18,6 +19,23 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  const getRandomDarkColor = useCallback(() => {
+    const minColorValue = 40;
+    const maxColorValue = 120;
+
+    const getRandomComponent = () => {
+      return Math.floor(
+        Math.random() * (maxColorValue - minColorValue + 1) + minColorValue
+      );
+    };
+
+    const r = getRandomComponent();
+    const g = getRandomComponent();
+    const b = getRandomComponent();
+    return `rgb(${r}, ${g}, ${b})`;
+  }, []);
+
+  
   useEffect(() => {
     const options = {
       root: null,
@@ -77,7 +95,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className ="bg-[#23252C] w-full h-auto font-Space relative ">
+    <div className="bg-[#23252C] w-full h-auto font-Space relative ">
       <div>
         <Navbar
           setNav={setNav}
@@ -90,7 +108,7 @@ const App = () => {
             <motion.div
               initial={{ y: "-100%", opacity: 1 }}
               animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "-100%", opacity: 1}}
+              exit={{ y: "-100%", opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.5 }}
               className="w-full z-[10] bg-[#161619] shadow-sm text-white top-[80px] h-auto fixed md:hidden"
             >
@@ -102,7 +120,7 @@ const App = () => {
       <div className="w-full px-3 xs:px-5 md:px-0 md:w-[1100px] md:mx-auto h-auto relative">
         <Home id="home" />
         <RevealDiv id="skills">
-          <Skills />
+          <Skills getRandomDarkColor={getRandomDarkColor}/>
         </RevealDiv>
         <RevealDiv id="projects">
           <Projects />
