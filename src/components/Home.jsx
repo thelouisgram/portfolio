@@ -42,7 +42,7 @@ const Home = () => {
         </motion.h1>
         <motion.h2
           variants={contentVariants}
-          className="text-[24px] xs:text-[28px] text-white font-[600]"
+          className="text-[24px] xs:text-[28px] ss:text-[48px] text-white font-[600]"
         >
           Adeyeye Adesanoye
         </motion.h2>
