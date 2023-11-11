@@ -47,7 +47,7 @@ const Projects = () => {
               Prev
             </button>
           )}
-          {startIndex < 5 && (
+          {startIndex < 4 && (
             <button
               className="font-[700] py-2 w-auto flex gap-1 items-center px-6 text-[16px] rounded-[4px] bg-blue-500 text-white hover:bg-white hover:text-[#23252C]"
               onClick={() => {
