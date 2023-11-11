@@ -7,6 +7,13 @@ export const projects = [
         Repository: "https://github.com/thelouisgram/audiophile-shop",
     },
     {
+        image: "/assets/projects/arch-studio.pnh",
+        name: "Arch Studio",
+        description: "A 4-page website challenge from frontend mentor",
+        Link: "https://arch-the-studio.vercel.app/",
+        Repository: "https://github.com/thelouisgram/arch-studio",
+    },
+    {
         image: "/assets/projects/movie-box.png",
         name: "Movie Box",
         description: "Movie discovery app to catch up on the best and trending movies",
