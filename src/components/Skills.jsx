@@ -2,13 +2,15 @@
 import RevealDivX from "./animation/RevealDivX";
 
 /* eslint-disable react/no-unescaped-entities */
-const Skills = ({ getRandomDarkColor }) => {
+const Skills = ({}) => {
   const tech = [
     { image: "/assets/skills/react.svg", name: "React" },
+    { image: "/assets/skills/typescript.svg", name: "TypeScript" },
     { image: "/assets/skills/tailwindcss.svg", name: "TailwindCss" },
+    { image: "/assets/skills/nextjs.svg", name: "NextJs" },
+    { image: "/assets/skills/redux.svg", name: "Redux" },
     { image: "/assets/skills/git.svg", name: "Git" },
     { image: "/assets/skills/html.svg", name: "Html" },
-    { image: "/assets/skills/typescript.svg", name: "TypeScript" },
     { image: "/assets/skills/javascript.svg", name: "JavaScript" },
     { image: "/assets/skills/css.svg", name: "Css" },
     { image: "/assets/skills/nodejs.svg", name: "Nodejs" },
@@ -31,16 +33,14 @@ const Skills = ({ getRandomDarkColor }) => {
         professional, and open-source endeavors.
       </h2>
       <RevealDivX>
-        <div className="w-full h-full grid grid-cols-2 ss:grid-cols-4">
+        <div className="w-full h-full grid grid-cols-2 ss:grid-cols-4 gap-2">
           {tech.map((item) => {
-            const randomBackgroundColor = getRandomDarkColor();
             return (
               <div
                 key={item.name}
-                className="h-full w-full flex items-center justify-center aspect-auto py-8 flex-col gap-2 font-Inter relative"
-                style={{ backgroundColor: randomBackgroundColor }}
+                className="h-full w-full flex items-center justify-center aspect-auto py-8 border border-gray-500 flex-col gap-2 font-Inter relative"
               >
-                <img src={item.image} alt={item.name} />
+                <img src={item.image} alt={item.name} className="w-[32px] h-auto"/>
                 <h3 className="font-[500] text-white">{item.name}</h3>
               </div>
             );

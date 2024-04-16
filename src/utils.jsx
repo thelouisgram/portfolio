@@ -9,7 +9,7 @@ export const projects = [
     {
         image: "/assets/projects/arch-studio.png",
         name: "Arch Studio",
-        description: "A 4-page website challenge from frontend mentor",
+        description: "A 4-page website with landing page",
         Link: "https://arch-the-studio.vercel.app/",
         Repository: "https://github.com/thelouisgram/arch-studio",
     },
@@ -48,27 +48,6 @@ export const projects = [
         Link: "https://best-image-box.vercel.app/",
         Repository: "https://github.com/thelouisgram/image-box",
     },
-    {
-        image: "/assets/projects/multi-step-form.png",
-        name: "Multi step Form",
-        description: "Multi step form, a frontend Mentor challenge",
-        Link: "https://thelouisgram-multi-step-form.netlify.app/",
-        Repository: "https://github.com/thelouisgram/multi-step-form",
-    },
-    {
-        image: "/assets/projects/todo-app.png",
-        name: "Todo App",
-        description: "CRUD Todo App, A frontend mentor challenge",
-        Link: "https://to-do-app-tawny-sigma.vercel.app/",
-        Repository: "https://github.com/thelouisgram/to-do-app",
-    },
-    {
-        image: "/assets/projects/weather-app.png",
-        name: "Weather App",
-        description: "Weather app to check weather of locations over the world",
-        Link: "https://thelouisgram.github.io/Weather-App/",
-        Repository: "https://github.com/thelouisgram/Weather-App",
-    },
 ];
 
 
@@ -79,6 +58,22 @@ export const scrollToSection = (sectionId) => {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 };
+
+
+export const noDoseOffImg = [
+    {
+        image: "/assets/projects/landing-page.png",
+    },
+    {
+        image: "/assets/projects/dashboard.png",
+    },
+    {
+        image: "/assets/projects/dashboard2.png",
+    },
+    {
+        image: "/assets/projects/drugs.png",
+    },
+]
 
 
 
