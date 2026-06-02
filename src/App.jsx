@@ -1,142 +1,69 @@
 import { useState, useEffect } from "react";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
+import Dock from "./components/Dock";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import MobileNavbar from "./components/MobileNavbar";
+import Experience from "./components/Experience";
 import RevealDiv from "./components/animation/RevealDiv";
 import { AnimatePresence, motion } from "framer-motion";
 import RevealDivX from "./components/animation/RevealDivX";
 import { useCallback } from "react";
 
 const App = () => {
-  const [nav, setNav] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
 
   const getRandomDarkColor = useCallback(() => {
     const minColorValue = 40;
     const maxColorValue = 120;
-
-    const getRandomComponent = () => {
-      return Math.floor(
-        Math.random() * (maxColorValue - minColorValue + 1) + minColorValue
-      );
-    };
-
-    const r = getRandomComponent();
-    const g = getRandomComponent();
-    const b = getRandomComponent();
-    return `rgb(${r}, ${g}, ${b})`;
+    const getRandomComponent = () => Math.floor(Math.random() * (maxColorValue - minColorValue + 1) + minColorValue);
+    return `rgb(${getRandomComponent()}, ${getRandomComponent()}, ${getRandomComponent()})`;
   }, []);
 
-  
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2,
-    };
-
+    const options = { root: null, rootMargin: "0px", threshold: 0.2 };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          switch (entry.target.id) {
-            case "home":
-              setActiveSection("home");
-              break;
-            case "skills":
-              setActiveSection("skills");
-              break;
-            case "projects":
-              setActiveSection("projects");
-              break;
-            case "contact":
-              setActiveSection("contact");
-              break;
-            default:
-              setActiveSection("home");
-          }
-        }
+        if (entry.isIntersecting) setActiveSection(entry.target.id);
       });
     }, options);
 
-    // Observe the components
-    observer.observe(document.getElementById("home"));
-    observer.observe(document.getElementById("skills"));
-    observer.observe(document.getElementById("projects"));
-    observer.observe(document.getElementById("contact"));
+    const sections = ["home", "experience", "skills", "projects", "contact"];
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
-    // Clean up the observer when the component unmounts
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
-    const checkScrollPosition = () => {
-      if (window.scrollY !== 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", checkScrollPosition);
-
-    return () => {
-      window.removeEventListener("scroll", checkScrollPosition);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="bg-[#23252C] w-full h-auto font-Space relative ">
-      <div>
-        <Navbar
-          setNav={setNav}
-          nav={nav}
-          activeSection={activeSection}
-          isScrolled={isScrolled}
-        />
-        <AnimatePresence>
-          {nav && (
-            <motion.div
-              initial={{ y: "-100%", opacity: 1 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "-100%", opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 0.5 }}
-              className="w-full z-[10] bg-[#161619] shadow-sm text-white top-[80px] h-auto fixed md:hidden"
-            >
-              <MobileNavbar setNav={setNav} activeSection={activeSection} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-      <div className="w-full px-3 xs:px-5 md:px-0 md:w-[1100px] md:mx-auto h-auto relative">
+    <div className="bg-zinc-950 text-zinc-400 min-h-screen font-Inter selection:bg-white/5">
+      <Dock activeSection={activeSection} />
+
+      <main className="max-w-7xl mx-auto px-6 py-12 md:py-24 space-y-48">
         <Home id="home" />
+        
+        <RevealDiv id="experience">
+          <Experience />
+        </RevealDiv>
+
         <RevealDiv id="skills">
           <Skills getRandomDarkColor={getRandomDarkColor}/>
         </RevealDiv>
+
         <RevealDiv id="projects">
           <Projects />
         </RevealDiv>
+
         <RevealDivX id="contact">
           <Contact />
         </RevealDivX>
-        {isScrolled && (
-          <button
-            onClick={scrollToTop}
-            className="w-[50px] h-[50px] rounded-full fixed infinite-up-and-down flex justify-center items-center p-3 cursor-pointer bg-gray-700 shadow-xl right-2 z-10 bottom-10"
-          >
-            <img src="/assets/up.png" alt="up" />
-          </button>
-        )}
-      </div>
+      </main>
+
+      <footer className="pb-32 text-center text-zinc-600 text-xs font-space tracking-widest uppercase">
+        <p>© {new Date().getFullYear()} • thelouisgram </p>
+      </footer>
     </div>
   );
 };

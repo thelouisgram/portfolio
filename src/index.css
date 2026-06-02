@@ -1,68 +1,196 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  /* Premium Grey / Silver / Obsidian Palette */
+  --bg-obsidian: #09090b;
+  --bg-card: rgba(20, 20, 23, 0.65);
+  --border-metallic: rgba(255, 255, 255, 0.06);
+  --border-metallic-hover: rgba(255, 255, 255, 0.2);
+  --text-platinum: #fafafa;
+  --text-silver: #f4f4f5;
+  --text-muted: #9f9fa7;
+  --text-dim: #71717a;
+  --accent-grey: #52525b;
+  --primary-silver: #d4d4d8;
+  --primary-silver-glow: rgba(212, 212, 216, 0.15);
+
   -webkit-tap-highlight-color: transparent;
-  overscroll-behavior: none;
+  scroll-behavior: smooth;
 }
 
-@keyframes upAndDown {
-  0%,
-  100% {
-    transform: translateY(0);
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/svg%3E");
+}
+
+/* Typography Extensions */
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Premium Smoked Glass Card */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-metallic);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--border-metallic-hover);
+  background: rgba(28, 28, 33, 0.8);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 
+              0 0 25px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* Premium Buttons */
+.btn-silver {
+  background-color: var(--text-silver);
+  color: var(--bg-obsidian);
+  border: 1px solid var(--text-silver);
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-silver:hover {
+  background-color: var(--text-platinum);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-charcoal {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text-silver);
+  border: 1px solid var(--border-metallic);
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-charcoal:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-metallic-hover);
+  transform: translateY(-2px);
+}
+
+/* Selection Override */
+::selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-platinum);
+}
+
+/* Pulsing Status Dot */
+.status-dot-pulse {
+  position: relative;
+  display: inline-flex;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: #a1a1aa;
+}
+
+.status-dot-pulse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  background-color: #a1a1aa;
+  animation: pulse-silver-anim 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-silver-anim {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
   }
   50% {
-    transform: translateY(-10px);
+    transform: scale(2.5);
+    opacity: 0;
   }
 }
 
-.infinite-up-and-down {
-  animation: upAndDown 1s ease-in-out infinite;
-}
-
-/* Define the animation keyframes for tilting */
-@keyframes tilt {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-5deg);
+/* Micro-animations */
+@keyframes soft-float {
+  0%, 100% {
+    transform: translateY(0px);
   }
   50% {
-    transform: rotate(5deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(5deg);
+    transform: translateY(-8px);
   }
 }
 
-/* Apply the animation to the element */
-.tilt {
-  animation-name: tilt; /* Refers to the @keyframes definition */
-  animation-duration: 0.5s; /* Animation duration (0.5 seconds in this example) */
-  animation-timing-function: linear; /* Linear timing function for constant speed */
-  animation-iteration-count: infinite; /* Infinite loop */
+.animate-float {
+  animation: soft-float 5s ease-in-out infinite;
 }
 
-@keyframes moveUpDown {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(30px); /* Adjust the distance as needed */
-    }
+/* Timeline Customizations */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.robot {
-    animation: moveUpDown 10s linear infinite; /* Adjust the duration as needed */
+.timeline-node {
+  position: absolute;
+  left: -4.5px;
+  top: 0.5rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: var(--text-muted);
+  border: 2px solid var(--bg-obsidian);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-node {
+  background: var(--text-silver);
+  box-shadow: 0 0 8px var(--text-silver);
+  transform: scale(1.3);
 }
 
