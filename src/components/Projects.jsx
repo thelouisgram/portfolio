@@ -58,14 +58,6 @@ const Projects = () => {
                   >
                     View Live
                   </a>
-                  <a 
-                    href={project.Repository} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="btn-charcoal px-6 py-2.5 rounded-full text-sm font-medium transition-colors text-center"
-                  >
-                    Source Code
-                  </a>
                 </div>
               </div>
               

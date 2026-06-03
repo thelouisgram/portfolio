@@ -5,7 +5,6 @@ export const projects = [
     description:
       "A premium clinical decision-support and medical calculation ecosystem. Streamlines complex drug dosing, patient risk stratification, and renal metrics for healthcare professionals with high precision.",
     Link: "https://calcmedical.fun",
-    Repository: "https://github.com/thelouisgram/calcmedical",
     tags: ["React", "TypeScript", "CSS Variables", "Framer Motion"],
     featured: true,
   },
@@ -15,17 +14,15 @@ export const projects = [
     description:
       "A cashless automated retail platform for hospitality venues. Integrates IoT vending telemetry, real-time inventory tracking, and secure payment workflows.",
     Link: "https://247luxedispense.com",
-    Repository: "https://github.com/thelouisgram",
     tags: ["Next.js", "TypeScript", "Stripe API", "CSS Modules"],
     featured: true,
   },
   {
-    image: "/assets/projects/nodoseoff.png",
+    image: "/assets/projects/nodoseofflanding.png",
     name: "NoDoseOff WebApp",
     description:
       "Medication adherence and tracking system with smart scheduling, compliance monitoring, and daily reporting dashboards.",
     Link: "https://nodoseoff.vercel.app",
-    Repository: "https://github.com/thelouisgram/nodoseoff",
     tags: ["Next.js", "TypeScript", "Supabase", "Redux"],
     featured: true,
   },
@@ -36,8 +33,7 @@ export const projects = [
     description:
       "Healthcare-focused digital platform supporting patient engagement, health information access, and streamlined medical workflows for African healthcare contexts.",
     Link: "https://health1stafrica.org",
-    Repository: "https://github.com/thelouisgram",
-    tags: ["React", "TypeScript", "Supabase", "UI/UX"],
+    tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     featured: false,
   },
   {
@@ -46,8 +42,7 @@ export const projects = [
     description:
       "Headphones, speakers, and audio e-commerce UI with cart functionality and responsive product layout.",
     Link: "https://audiophile-shop-nu.vercel.app/",
-    Repository: "https://github.com/thelouisgram/audiophile-shop",
-    tags: ["React", "Tailwind"],
+    tags: ["React", "Tailwind", "Frontend Mentor"],
     featured: false,
   },
   {
@@ -56,8 +51,7 @@ export const projects = [
     description:
       "Multi-page architecture studio website with responsive layouts and clean design system implementation.",
     Link: "https://arch-the-studio.vercel.app/",
-    Repository: "https://github.com/thelouisgram/arch-studio",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["HTML", "CSS", "JavaScript", "Frontend Mentor"],
     featured: false,
   },
   {
@@ -66,8 +60,7 @@ export const projects = [
     description:
       "Dictionary web app built using a public API with search, definitions, and phonetics support.",
     Link: "https://dictionary-web-app-sandy.vercel.app/",
-    Repository: "https://github.com/thelouisgram/dictionary-web-app",
-    tags: ["React", "Tailwind"],
+    tags: ["React", "Tailwind", "API", "Frontend Mentor"],
     featured: false,
   },
   {
@@ -76,8 +69,7 @@ export const projects = [
     description:
       "Simple body mass index calculator for quick health metric estimation.",
     Link: "https://body-mass-index-calculator-ebon.vercel.app/",
-    Repository: "https://github.com/thelouisgram/body-mass-index-calculator",
-    tags: ["React"],
+    tags: ["React", "Tailwind", "Frontend Mentor"],
     featured: false,
   },
   {
@@ -86,8 +78,7 @@ export const projects = [
     description:
       "REST Countries API explorer with search and filtering capabilities.",
     Link: "https://rest-country-api-thelouisgram.vercel.app/",
-    Repository: "https://github.com/thelouisgram/rest-country-api",
-    tags: ["React", "Tailwind", "API"],
+    tags: ["React", "Tailwind", "API", "Frontend Mentor"],
     featured: false,
   },
   {
@@ -95,9 +86,8 @@ export const projects = [
     name: "Todo App",
     description:
       "Minimal productivity application for task tracking with local persistence and clean UI interactions.",
-    Link: "https://todo-app-demo.vercel.app",
-    Repository: "https://github.com/thelouisgram/todo-app",
-    tags: ["React", "JavaScript", "CSS"],
+    Link: "https://to-do-app-tawny-sigma.vercel.app/",
+    tags: ["React", "JavaScript", "CSS", "Frontend Mentor"],
     featured: false,
   },
 
@@ -106,8 +96,7 @@ export const projects = [
     name: "Weather App",
     description:
       "Real-time weather application consuming external APIs to display live meteorological data with responsive UI.",
-    Link: "https://weather-app-demo.vercel.app",
-    Repository: "https://github.com/thelouisgram/weather-app",
+    Link: "https://thelouisgram.github.io/Weather-App/",
     tags: ["React", "API Integration", "CSS"],
     featured: false,
   },

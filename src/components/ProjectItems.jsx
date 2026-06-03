@@ -34,20 +34,12 @@ const ProjectItems = ({ startIndex, itemsPerPage }) => {
                 >
                   Live Demo
                 </a>
-                <a 
-                  href={item.Repository} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-zinc-900 text-zinc-150 border border-white/10 px-4 py-2 rounded-full text-xs font-semibold hover:bg-zinc-800 transition-colors font-space"
-                >
-                  Codebase
-                </a>
               </div>
             </div>
             <div className="p-6 flex flex-col flex-grow space-y-3 justify-between">
               <div className="space-y-2">
                 <h3 className="text-lg font-bold text-zinc-200 group-hover:text-zinc-100 transition-colors font-space">{item.name}</h3>
-                <p className="text-zinc-500 text-xs leading-relaxed line-clamp-3">{item.description}</p>
+                <p className="hidden md:flex text-zinc-500 text-xs leading-relaxed line-clamp-3">{item.description}</p>
               </div>
               
               <div className="flex flex-wrap gap-1.5 pt-2">
