@@ -1,11 +1,11 @@
 export const projects = [
   {
-    image: "/assets/projects/calcmedical.png",
-    name: "CalcMedical",
+    image: "/assets/projects/nodoseofflanding.png",
+    name: "NoDoseOff WebApp",
     description:
-      "A premium clinical decision-support and medical calculation ecosystem. Streamlines complex drug dosing, patient risk stratification, and renal metrics for healthcare professionals with high precision.",
-    Link: "https://calcmedical.fun",
-    tags: ["React", "TypeScript", "CSS Variables", "Framer Motion"],
+      "Medication adherence and tracking system with smart scheduling, compliance monitoring, and daily reporting dashboards.",
+    Link: "https://nodoseoff.vercel.app",
+    tags: ["Next.js", "TypeScript", "Supabase", "Redux"],
     featured: true,
   },
   {
@@ -15,15 +15,6 @@ export const projects = [
       "A cashless automated retail platform for hospitality venues. Integrates IoT vending telemetry, real-time inventory tracking, and secure payment workflows.",
     Link: "https://247luxedispense.com",
     tags: ["Next.js", "TypeScript", "Stripe API", "CSS Modules"],
-    featured: true,
-  },
-  {
-    image: "/assets/projects/nodoseofflanding.png",
-    name: "NoDoseOff WebApp",
-    description:
-      "Medication adherence and tracking system with smart scheduling, compliance monitoring, and daily reporting dashboards.",
-    Link: "https://nodoseoff.vercel.app",
-    tags: ["Next.js", "TypeScript", "Supabase", "Redux"],
     featured: true,
   },
 
