@@ -17,6 +17,16 @@ export const projects = [
     tags: ["Next.js", "TypeScript", "Stripe API", "CSS Modules"],
     featured: true,
   },
+  
+  {
+    image: "/assets/projects/mac.png",
+    name: "MAC Digital Agency ",
+    description:
+      "Landing Page Website for a Digital creative agency, Pixel perfect implementation from Figma",
+    Link: "https://mac-azure-two.vercel.app/",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Landing Page"],
+    featured: true,
+  },
 
   {
     image: "/assets/projects/health1stafrica.png",
