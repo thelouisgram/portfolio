@@ -1,22 +1,25 @@
-import { useState, useEffect } from "react";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
-import Dock from "./components/Dock";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import RevealDiv from "./components/animation/RevealDiv";
-import { AnimatePresence, motion } from "framer-motion";
-import RevealDivX from "./components/animation/RevealDivX";
-import { useCallback } from "react";
+"use client";
 
-const App = () => {
+import { useState, useEffect, useCallback } from "react";
+import Contact from "./Contact";
+import Home from "./Home";
+import Dock from "./Dock";
+import Projects from "./Projects";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import RevealDiv from "./animation/RevealDiv";
+import RevealDivX from "./animation/RevealDivX";
+
+const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   const getRandomDarkColor = useCallback(() => {
     const minColorValue = 40;
     const maxColorValue = 120;
-    const getRandomComponent = () => Math.floor(Math.random() * (maxColorValue - minColorValue + 1) + minColorValue);
+    const getRandomComponent = () =>
+      Math.floor(
+        Math.random() * (maxColorValue - minColorValue + 1) + minColorValue,
+      );
     return `rgb(${getRandomComponent()}, ${getRandomComponent()}, ${getRandomComponent()})`;
   }, []);
 
@@ -29,7 +32,7 @@ const App = () => {
     }, options);
 
     const sections = ["home", "experience", "skills", "projects", "contact"];
-    sections.forEach(id => {
+    sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -42,21 +45,21 @@ const App = () => {
       <Dock activeSection={activeSection} />
 
       <main className="max-w-7xl mx-auto px-6 py-12 md:py-24 space-y-48">
-        <Home id="home" />
-        
-        <RevealDiv id="experience">
+        <Home />
+
+        <RevealDiv>
           <Experience />
         </RevealDiv>
 
-        <RevealDiv id="skills">
-          <Skills getRandomDarkColor={getRandomDarkColor}/>
+        <RevealDiv>
+          <Skills getRandomDarkColor={getRandomDarkColor} />
         </RevealDiv>
 
-        <RevealDiv id="projects">
+        <RevealDiv>
           <Projects />
         </RevealDiv>
 
-        <RevealDivX id="contact">
+        <RevealDivX>
           <Contact />
         </RevealDivX>
       </main>
@@ -68,4 +71,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Portfolio;

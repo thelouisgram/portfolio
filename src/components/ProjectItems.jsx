@@ -1,3 +1,5 @@
+"use client";
+
 import { projects } from "../utils";
 import GlassCard from "./GlassCard";
 import { motion } from "framer-motion";
