@@ -1,3 +1,5 @@
+"use client";
+
 import GlassCard from "./GlassCard";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";

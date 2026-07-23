@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

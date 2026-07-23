@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { scrollToSection } from "../utils";
 import { ArrowDownRight, HeartPulse } from "lucide-react";

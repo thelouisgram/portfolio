@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { projects, scrollToSection } from "../utils";
 import ProjectItems from "./ProjectItems";

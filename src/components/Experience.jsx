@@ -1,81 +1,79 @@
-import React from "react";
+"use client";
+
 import { motion } from "framer-motion";
-import GlassCard from "./GlassCard";
 import { experience } from "../utils";
 
 const Experience = () => {
   return (
-    <section id="experience" className="space-y-12">
-      <div className="text-center md:text-left space-y-2">
-        <h2 className="text-zinc-500 font-medium tracking-wider uppercase font-space text-sm">
-          Experience
-        </h2>
-        <h1 className="text-3xl md:text-5xl font-bold text-zinc-100 tracking-tight font-space">
-          Professional <span className="text-zinc-400 font-light">Journey</span>
-        </h1>
+    <section id="experience" className="space-y-12 md:space-y-16">
+      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="space-y-2 text-center md:text-left">
+          <h2 className="text-zinc-500 font-medium tracking-wider uppercase font-space text-sm">
+            Experience
+          </h2>
+          <h1 className="text-3xl md:text-5xl font-bold text-zinc-100 tracking-tight font-space">
+            Professional <span className="text-zinc-400 font-light">Journey</span>
+          </h1>
+        </div>
+        <p className="max-w-sm text-sm leading-relaxed text-zinc-500 text-center md:text-right mx-auto md:mx-0">
+          From first React builds to shipping production products for healthcare
+          and commerce clients.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Timeline */}
-        <div className="space-y-8 relative">
-          <div className="absolute left-4 md:left-0 top-0 bottom-4 w-px bg-zinc-800" style={{ left: '16px' }} />
+      <ol className="space-y-0 border-t border-white/[0.06]">
+        {experience.map((exp, index) => (
+          <motion.li
+            key={`${exp.company}-${exp.period}`}
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.65,
+              delay: index * 0.08,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="group border-b border-white/[0.06]"
+          >
+            <div className="grid grid-cols-1 gap-6 py-8 sm:py-10 md:grid-cols-12 md:gap-8 md:py-12">
+              {/* Period */}
+              <div className="md:col-span-3">
+                <p className="font-space text-xs uppercase tracking-[0.18em] text-zinc-500 md:pt-1">
+                  {exp.period}
+                </p>
+                <p className="mt-3 font-space text-5xl font-light leading-none text-zinc-800 tabular-nums md:text-6xl group-hover:text-zinc-700 transition-colors">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+              </div>
 
-          {experience.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="timeline-item pl-12"
-            >
-              <div className="absolute w-3 h-3 rounded-full bg-zinc-400 left-2.5 top-6" />
-              <GlassCard className="p-6 border border-white/5 bg-zinc-900/20 hover:border-white/20 transition-colors group">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-zinc-100 font-space">
-                      {exp.title}
-                    </h3>
-                    <p className="text-zinc-400 font-medium font-space text-sm">
-                      {exp.company}
-                    </p>
-                  </div>
-                  <span className="inline-block text-xs text-zinc-500 bg-white/[0.03] border border-white/[0.05] px-3 py-1 rounded-full font-space shrink-0">
-                    {exp.period}
-                  </span>
+              {/* Content */}
+              <div className="md:col-span-6 space-y-3">
+                <div className="space-y-1">
+                  <h3 className="font-space text-xl font-semibold tracking-tight text-zinc-100 md:text-2xl">
+                    {exp.title}
+                  </h3>
+                  <p className="font-space text-sm text-zinc-400">{exp.company}</p>
                 </div>
-                <p className="text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed">
+                <p className="max-w-xl text-base leading-relaxed text-zinc-500 group-hover:text-zinc-400 transition-colors">
                   {exp.description}
                 </p>
-              </GlassCard>
-            </motion.div>
-          ))}
-        </div>
+              </div>
 
-        {/* Media Stack */}
-        <div className="relative h-[500px] hidden md:block">
-          {experience.slice(0, 3).map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, rotate: index % 2 === 0 ? -4 : 4, scale: 0.92 }}
-              whileInView={{ opacity: 1, rotate: index % 2 === 0 ? -1.5 : 1.5, scale: 1 }}
-              viewport={{ once: true }}
-              whileHover={{ rotate: 0, scale: 1.03, zIndex: 50 }}
-              className="absolute inset-x-0 top-0 transition-all duration-700"
-              style={{ top: `${index * 70}px`, zIndex: 10 - index }}
-            >
-              <GlassCard className="p-2 overflow-hidden aspect-[4/3] border border-white/5 bg-zinc-950/40">
-                <img
-                  src={exp.image}
-                  alt={exp.company}
-                  className="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 contrast-110 brightness-90 transition-all duration-700"
-                />
-              </GlassCard>
-            </motion.div>
-          ))}
-          <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-white/[0.01] blur-[100px] rounded-full -z-10" />
-        </div>
-      </div>
+              {/* Thumbnail */}
+              <div className="md:col-span-3 md:flex md:justify-end">
+                <div className="relative h-36 w-full overflow-hidden rounded-2xl border border-white/[0.06] bg-zinc-900/40 sm:h-40 md:h-32 md:w-40 lg:h-36 lg:w-44">
+                  <img
+                    src={exp.image}
+                    alt={exp.company}
+                    className="h-full w-full object-cover grayscale contrast-110 brightness-90 transition-all duration-700 group-hover:scale-[1.04] group-hover:grayscale-0"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/40 to-transparent" />
+                </div>
+              </div>
+            </div>
+          </motion.li>
+        ))}
+      </ol>
     </section>
   );
 };
