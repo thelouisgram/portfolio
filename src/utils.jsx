@@ -9,15 +9,6 @@ export const projects = [
     featured: true,
   },
   {
-    image: "/assets/projects/suzies-hotel.jpg",
-    name: "Suzie's Hotel",
-    description:
-      "Full-stack hotel platform with a public booking site, reception PMS, room inventory, housekeeping, and live operations dashboards.",
-    Link: "https://safahnahotel.vercel.app",
-    tags: ["Next.js", "TypeScript", "Prisma", "MongoDB"],
-    featured: true,
-  },
-  {
     image: "/assets/projects/luxedispense.png",
     name: "Luxe Dispense",
     description:
@@ -128,7 +119,7 @@ export const experience = [
     company: "Self-Employed (Upwork & Direct Clients)",
     period: "2023 - Present",
     description:
-      "Developing production-grade web applications for medical, hospitality, and e-commerce clients. Notable work includes NoDoseOff (medication compliance), Suzie's Hotel (booking site + PMS), Luxe Dispense (smart vending), and commissioned builds for Health1st Africa and other clients.",
+      "Developing production-grade web applications for medical, hospitality, and e-commerce clients. Notable work includes NoDoseOff (medication compliance), Luxe Dispense (smart vending), and commissioned builds for Health1st Africa and other clients.",
     image: "/assets/projects/nodoseofflanding.png",
   },
   {
